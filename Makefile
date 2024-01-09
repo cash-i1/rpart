@@ -8,3 +8,6 @@ run: $(name)
 
 $(name): $(files)
 	g++ -o $@ $(files) $(args)
+
+clean:
+	rm -rf $(name)

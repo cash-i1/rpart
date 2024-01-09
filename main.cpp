@@ -6,7 +6,7 @@
 #include "particle/particle_ref.cpp"
 
 int main() {
-    InitWindow(scr_width, scr_height, "rpart");
+    InitWindow(scr_width+400, scr_height, "rpart");
     std::cout << grid_width << " " << scr_width << std::endl;    
 
     Board b;
@@ -18,7 +18,9 @@ int main() {
             b.set_particle_at_pos(b.vector2part(GetMousePosition()), pSAND());
             
         }
+    
 
+        b.step();
         BeginDrawing();
             b.draw();
         EndDrawing();

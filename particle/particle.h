@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <raylib.h>
 #include <string>
 
@@ -18,7 +19,7 @@ public:
     Vector2 dir;
     int type;
 
+    virtual void update() {
 
-    void update();
-
+    }
 };

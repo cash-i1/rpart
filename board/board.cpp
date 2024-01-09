@@ -29,7 +29,14 @@ void Board::set_particle_at_pos(Part2 pos, Particle p) {
 }
 
 // Misc
-void Board::step() {}
+void Board::step() {
+    std::cout << "Hello i am a poo" << std::endl;
+    for (int row = 0; row < grid_width; row++) {
+        for (int col = 0; col < grid_height; col++) {
+            board_ptr->board[row][col].update();
+        }
+    }
+}
 void Board::init() {
     board_ptr = this;
 

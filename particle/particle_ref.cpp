@@ -1,5 +1,6 @@
 #include "particle.h"
 #include <raylib.h>
+#include <iostream>
 
 class pSAND: public Particle{
 public:
@@ -14,9 +15,11 @@ public:
         ppf = {0,1};
         dir = {0,1};
     };
+
     void update() {
-        this->pos.x *= ppf.y;
-        this->pos.x *= ppf.x;
+        this->pos.y += ppf.y;
+        this->pos.x += ppf.x;
+        std::cout << pos.y << std::endl;
     }
 };
 
