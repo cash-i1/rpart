@@ -38,6 +38,7 @@ void Board::step() {
 }
 void Board::init() {
     board_ptr = this;
+    //test
 
     for (int row = 0; row < grid_width; row++) {
         for (int col = 0; col < grid_height; col++) {
